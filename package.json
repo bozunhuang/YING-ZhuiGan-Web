@@ -1,0 +1,11 @@
+{
+  "name": "ying-zhuigan-web",
+  "version": "1.0.0",
+  "description": "A simple web project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
