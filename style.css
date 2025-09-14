@@ -1,9 +1,11 @@
 body {
-    font-family: Arial, "Microsoft YaHei", sans-serif;
+    font: 12px/1.125 Arial,Helvetica,sans-serif;
+    _font-family: "SimSun";
     margin: 20px;
     background-color: #d3d8bb;
     color: #333;
     line-height: 1.6;
+    font-size: medium;
 }
 
 h1 {
