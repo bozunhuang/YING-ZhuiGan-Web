@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, "Songti SC", sans-serif;
+    
     margin: 20px;
     background-color: #d3d8bb;
     color: #333;
@@ -7,6 +7,10 @@ body {
     font-size: medium;
 }
 
+pre {
+    font-family: Arial, "Songti SC", sans-serif;
+    line-height: 1.6;
+}
 h1 {
     color: #007acc;
 }
