@@ -1,6 +1,5 @@
 body {
-    font: 12px/1.125 Arial,Helvetica,sans-serif;
-    _font-family: "Songti SC";
+    font-family: Arial, "Songti SC", sans-serif;
     margin: 20px;
     background-color: #d3d8bb;
     color: #333;
