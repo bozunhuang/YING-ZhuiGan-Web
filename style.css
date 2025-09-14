@@ -3,14 +3,19 @@ body {
     margin: 20px;
     background-color: #d3d8bb;
     color: #333;
-    line-height: 1.6;
     font-size: medium;
 }
 
-pre {
-    font-family: Arial, "Songti SC", sans-serif;
+.english-poem-font {
+    font-family: "Times New Roman", serif;
     line-height: 1.6;
 }
+
+.chinese-poem-font {
+    font-family: "Songti SC", serif;
+    line-height: 2.0;
+}
+
 h1 {
     color: #007acc;
 }
