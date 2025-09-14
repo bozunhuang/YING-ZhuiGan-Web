@@ -1,8 +1,9 @@
 body {
     font-family: Arial, "Microsoft YaHei", sans-serif;
     margin: 20px;
-    background-color: #f5f5f5;
+    background-color: #d3d8bb;
     color: #333;
+    line-height: 1.6;
 }
 
 h1 {
