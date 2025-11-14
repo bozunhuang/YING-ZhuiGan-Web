@@ -1,0 +1,11 @@
+section {
+    margin: 50px 0px;
+}
+
+button{
+    background-color: black;
+    padding: 10px 20px;
+    color: aliceblue;
+    border: none;
+    border-radius: 100px;
+}
