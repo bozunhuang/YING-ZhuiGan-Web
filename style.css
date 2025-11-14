@@ -1,4 +1,4 @@
-header{
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +13,12 @@ body {
     padding: 50px;
 }
 
-a{
+a, .logo{
+    text-decoration: none;
+    color: black;
+}
+
+.a-subpage{
     text-decoration: none;
     color: black;
     font-weight: bold;
