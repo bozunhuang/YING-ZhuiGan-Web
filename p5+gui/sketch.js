@@ -99,6 +99,25 @@ let numInputSketch = function(p){
 new p5(numInputSketch);
 
 
+//dropdown
+let dropdownSketch = function(p){
+    let dropdown;
+    p.setup = function(){
+        let c = p.createCanvas(500, 300);
+        c.parent("sec5CanvasWrapper");
+        dropdown = $("#colorDropdown");
+        
+        
+    }
+    p.draw = function(){
+        p.background(dropdown.val());
+        // p.text(dropdown.val(), width/2, height/2);
+    }
+}
+
+new p5(dropdownSketch);
+
+
 //text field; placed last
 var textInput = $("#text-field");
 
