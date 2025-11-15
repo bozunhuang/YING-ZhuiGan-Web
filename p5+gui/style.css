@@ -9,3 +9,15 @@ button{
     border: none;
     border-radius: 100px;
 }
+
+.div-animate{
+    position: relative;
+}
+
+.p-clickanimate{
+    position: relative;
+}
+
+.hidden{
+    display: none;
+}
