@@ -1,6 +1,5 @@
 // var slider = $("#slider");
 
-
 // function setup(){
 //     var c = createCanvas(500, 500);
 //     c.parent("canvasWrapper");
@@ -15,131 +14,169 @@
 
 //slider
 
-let sliderSketch = function(p){
-    let slider;
+let sliderSketch = function (p) {
+  let slider;
 
-    p.setup = function(){
-        let c = p.createCanvas(500, 500);
-        c.parent("canvasWrapper");
+  p.setup = function () {
+    let c = p.createCanvas(500, 500);
+    c.parent("canvasWrapper");
 
-        slider = $("#slider");
-    };
+    slider = $("#slider");
+  };
 
-    p.draw = function(){
-        p.background(0);
-        p.fill("#0000FF");
-        p.circle(width/2, height/2, slider.val());
-    };
+  p.draw = function () {
+    p.background(0);
+    p.fill("#0000FF");
+    p.circle(width / 2, height / 2, slider.val());
+  };
 };
 
 new p5(sliderSketch);
 
-
 //buttons
-let buttonSketch = function(p){
-    let btn;
-    let bgColor;
-    p.setup = function(){
-        let c2 = p.createCanvas(500, 500);
-        c2.parent("sec3CanvasWrapper");
-        btn = $("#btn-bg");
-        bgColor = 100;
-    };
-    p.draw = function(){ 
-        p.background(0);
-        p.fill(bgColor);
-        p.circle(width/2, height/2, 400);
-    };
-    p.changeBGColor = function(){
-        bgColor+=random(-50, 50);
-    }
+let buttonSketch = function (p) {
+  let btn;
+  let bgColor;
+  p.setup = function () {
+    let c2 = p.createCanvas(500, 500);
+    c2.parent("sec3CanvasWrapper");
+    btn = $("#btn-bg");
+    bgColor = 100;
+  };
+  p.draw = function () {
+    p.background(0);
+    p.fill(bgColor);
+    p.circle(width / 2, height / 2, 400);
+  };
+  p.changeBGColor = function () {
+    bgColor += random(-50, 50);
+  };
 };
 
 let myButtonSketch = new p5(buttonSketch);
 
-$("#btn-bg").click(function(){
-    myButtonSketch.changeBGColor();
+$("#btn-bg").click(function () {
+  myButtonSketch.changeBGColor();
 });
 
-
-
 //number input
-let numInputSketch = function(p){
-    let numInputX, numInputY;
-    let tileW, tileH;
-    p.setup = function(){
-        let c = p.createCanvas(500, 500);
-        c.parent("sec4CanvasWrapper");
-        numInputX = $("#tilesX");
-        numInputY = $("#tilesY");
-        
-    }
-    p.draw = function(){
-        p.background(0);
-        p.fill(255);
-        tileW = p.width / numInputX.val();
-        tileH = p.height / numInputY.val();
-        for(let y = 0; y < numInputY.val(); y++){
-            for(let x = 0; x < numInputX.val(); x++){
-                if(y %2 == 0){
-                    if(x %2 == 1){
-                        p.rect(x*tileW, y*tileH, tileW, tileH);
-                    }
-                } else {
-                    if(x %2 == 0){
-                        p.rect(x*tileW, y*tileH, tileW, tileH);
-                    }
-                }
-                
-            }
+let numInputSketch = function (p) {
+  let numInputX, numInputY;
+  let tileW, tileH;
+  p.setup = function () {
+    let c = p.createCanvas(500, 500);
+    c.parent("sec4CanvasWrapper");
+    numInputX = $("#tilesX");
+    numInputY = $("#tilesY");
+  };
+  p.draw = function () {
+    p.background(0);
+    p.fill(255);
+    tileW = p.width / numInputX.val();
+    tileH = p.height / numInputY.val();
+    for (let y = 0; y < numInputY.val(); y++) {
+      for (let x = 0; x < numInputX.val(); x++) {
+        if (y % 2 == 0) {
+          if (x % 2 == 1) {
+            p.rect(x * tileW, y * tileH, tileW, tileH);
+          }
+        } else {
+          if (x % 2 == 0) {
+            p.rect(x * tileW, y * tileH, tileW, tileH);
+          }
         }
+      }
     }
-}
+  };
+};
 
 new p5(numInputSketch);
 
-
 //dropdown
-let dropdownSketch = function(p){
-    let dropdown;
-    p.setup = function(){
-        let c = p.createCanvas(500, 300);
-        c.parent("sec5CanvasWrapper");
-        dropdown = $("#colorDropdown");
-        
-        
-    }
-    p.draw = function(){
-        p.background(dropdown.val());
-        // p.text(dropdown.val(), width/2, height/2);
-    }
-}
+let dropdownSketch = function (p) {
+  let dropdown;
+  p.setup = function () {
+    let c = p.createCanvas(500, 300);
+    c.parent("sec5CanvasWrapper");
+    dropdown = $("#colorDropdown");
+  };
+  p.draw = function () {
+    p.background(dropdown.val());
+    // p.text(dropdown.val(), width/2, height/2);
+  };
+};
 
 new p5(dropdownSketch);
 
 // checkbox
-
-let checkboxSketch = function(p){
-  
-    p.setup = function(){
-        let c = p.createCanvas(500, 500);
-        c.parent("sec6CanvasWrapper");
+let checkboxSketch = function (p) {
+  p.setup = function () {
+    let c = p.createCanvas(500, 500);
+    c.parent("sec6CanvasWrapper");
+  };
+  p.draw = function () {
+    p.background(0);
+    p.fill("#0000FF");
+    if ($("#checkbox").prop("checked")) {
+      p.circle(width / 2, height / 2, 400);
+    } else {
+      p.fill(200);
+      p.textSize(20);
+      p.textAlign(CENTER, CENTER);
+      p.text("Nothing to see here", width / 2, height / 2);
     }
-    p.draw = function(){
-        p.background(0);
-        p.fill("#0000FF");
-        if($("#checkbox").prop("checked")){
-            
-            p.circle(width/2, height/2, 400);
-        } else{
-            p.fill(200);
-            p.textSize(20);
-            p.textAlign(CENTER, CENTER);
-            p.text("Nothing to see here", width/2, height/2);
-        }
-    }
-}
+  };
+};
 new p5(checkboxSketch);
+
+
+
+//upload image
+let imgUploadSketch = function (p) {
+  let img = null;
+
+  p.setup = function () {
+    let c = p.createCanvas(500, 500);
+    c.parent("sec7CanvasWrapper");
+  };
+
+  p.draw = function () {
+    p.background(0); // always clear; remove if you want trails
+
+    if (img) {
+      p.push();
+      // use instance mouse
+      p.image(img, 0, 0, p.width, p.height);
+      p.translate(p.mouseX, p.mouseY);
+      p.image(img, 0, 0, 300, 300);
+      p.pop();
+    } else {
+      // optional "no image" text
+      p.fill(255);
+      p.textAlign(p.CENTER, p.CENTER);
+      p.text("Upload an image!", p.width / 2, p.height / 2);
+    }
+  };
+
+  p.handleImageUpload = function (event) {
+    let file = event.target.files[0];
+    if (file) {
+      let reader = new FileReader();
+      reader.onload = function (e) {
+        // use p.loadImage in instance mode
+        img = p.loadImage(e.target.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+};
+
+let myImgUploadSketch = new p5(imgUploadSketch);
+
+// IMPORTANT: pass the event into handleImageUpload
+$("#imageUpload").on("change", function (e) {
+  myImgUploadSketch.handleImageUpload(e);
+});
 
 
 
@@ -147,21 +184,20 @@ new p5(checkboxSketch);
 //text field; placed last
 var textInput = $("#text-field");
 
-function setup(){
-    var c1 = createCanvas(500, 500);
-    c1.parent("sec2CanvasWrapper");
+function setup() {
+  var c1 = createCanvas(500, 500);
+  c1.parent("sec2CanvasWrapper");
 }
 
-function draw(){
-    background(0);
-    fill("#0000ff");
-    textSize(80);
-    textAlign(CENTER, CENTER);
-    text(textInput.val(), width/2, height/2);
+function draw() {
+  background(0);
+  fill("#0000ff");
+  textSize(80);
+  textAlign(CENTER, CENTER);
+  text(textInput.val(), width / 2, height / 2);
 }
 
 new p5(textInputSketch);
-
 
 // let textInputSketch = function(p){
 //     let textInput;
@@ -179,7 +215,3 @@ new p5(textInputSketch);
 //     }
 
 // }
-
-
-
-
