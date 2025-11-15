@@ -21,3 +21,7 @@ button{
 .hidden{
     display: none;
 }
+
+.canvas{
+    margin-top: 10px;
+}

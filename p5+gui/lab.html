@@ -16,7 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
     <!-- <script src="jquery-3.7.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="sketch.js"></script>
+    
   </head>
   <body>
     <header>
@@ -36,7 +36,31 @@
       <h2>Slider</h2>
 
       <input type="range" id="slider" value="250" min="0" max="500">
-      <div id="canvasWrapper"></div>
+
+      <div id="canvasWrapper" class="canvas"></div>
+
+
+      <section>
+      <h2>Text input</h2>
+      <!-- <input type="text" id="text" placeholder="write something..."> -->
+        <label>
+          <textarea id="text-field" placeholder="Enter some text here.."></textarea>
+        </label>
+
+      <div id="sec2CanvasWrapper" class="canvas"></div>
+      </section>
+
+      <section>
+        <h2>Buttons</h2>
+        <button type="button" id="btn-bg">Change cirlce color</button>
+        <div id="sec3CanvasWrapper" class="canvas"></div>
+
+      </section>
+
+      <!-- script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.min.js"></script>
+
+      <script src="sketch.js"></script>
     </main>
   </body>
 </html>

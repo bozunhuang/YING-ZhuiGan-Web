@@ -25,7 +25,7 @@ a, .logo{
 }
 
 .english-poem-font {
-    font-family: "Times New Roman", serif;
+    font-family: "Times New Roman", system-ui;
     line-height: 1.6;
 }
 
