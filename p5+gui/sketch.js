@@ -117,6 +117,32 @@ let dropdownSketch = function(p){
 
 new p5(dropdownSketch);
 
+// checkbox
+
+let checkboxSketch = function(p){
+  
+    p.setup = function(){
+        let c = p.createCanvas(500, 500);
+        c.parent("sec6CanvasWrapper");
+    }
+    p.draw = function(){
+        p.background(0);
+        p.fill("#0000FF");
+        if($("#checkbox").prop("checked")){
+            
+            p.circle(width/2, height/2, 400);
+        } else{
+            p.fill(200);
+            p.textSize(20);
+            p.textAlign(CENTER, CENTER);
+            p.text("Nothing to see here", width/2, height/2);
+        }
+    }
+}
+new p5(checkboxSketch);
+
+
+
 
 //text field; placed last
 var textInput = $("#text-field");
