@@ -16,7 +16,6 @@
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
     <!-- <script src="jquery-3.7.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    
   </head>
   <body>
     <header>
@@ -39,22 +38,34 @@
 
       <div id="canvasWrapper" class="canvas"></div>
 
-
       <section>
-      <h2>Text input</h2>
-      <!-- <input type="text" id="text" placeholder="write something..."> -->
+        <h2>Text input</h2>
+        <!-- <input type="text" id="text" placeholder="write something..."> -->
         <label>
-          <textarea id="text-field" placeholder="Enter some text here.."></textarea>
+          <textarea
+            id="text-field"
+            placeholder="Enter some text here.."></textarea>
         </label>
 
-      <div id="sec2CanvasWrapper" class="canvas"></div>
+        <div id="sec2CanvasWrapper" class="canvas"></div>
       </section>
 
       <section>
         <h2>Buttons</h2>
-        <button type="button" id="btn-bg">Change cirlce color</button>
+        <button type="button" id="btn-bg">Randomize circle color</button>
         <div id="sec3CanvasWrapper" class="canvas"></div>
+      </section>
 
+      <section>
+        <h2>Number Input</h2>
+        <label
+          >Tile Width <input type="number" id="tilesX" value="25" min="1" max="50"
+       ></label>
+       <br>
+        <label> Tile Height
+        <input type="number" id="tilesY" value="25" min="1" max="50">
+        </label>
+        <div id="sec4CanvasWrapper" class="canvas"></div>
       </section>
 
       <!-- script -->

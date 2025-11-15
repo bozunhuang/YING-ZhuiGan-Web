@@ -63,7 +63,43 @@ $("#btn-bg").click(function(){
 
 
 
-//text field
+//number input
+let numInputSketch = function(p){
+    let numInputX, numInputY;
+    let tileW, tileH;
+    p.setup = function(){
+        let c = p.createCanvas(500, 500);
+        c.parent("sec4CanvasWrapper");
+        numInputX = $("#tilesX");
+        numInputY = $("#tilesY");
+        
+    }
+    p.draw = function(){
+        p.background(0);
+        p.fill(255);
+        tileW = p.width / numInputX.val();
+        tileH = p.height / numInputY.val();
+        for(let y = 0; y < numInputY.val(); y++){
+            for(let x = 0; x < numInputX.val(); x++){
+                if(y %2 == 0){
+                    if(x %2 == 1){
+                        p.rect(x*tileW, y*tileH, tileW, tileH);
+                    }
+                } else {
+                    if(x %2 == 0){
+                        p.rect(x*tileW, y*tileH, tileW, tileH);
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+new p5(numInputSketch);
+
+
+//text field; placed last
 var textInput = $("#text-field");
 
 function setup(){
