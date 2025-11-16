@@ -41,3 +41,31 @@ h1 {
 p {
     font-size: 1.1em;
 }
+
+.nav-btns{
+    display: flex;
+    gap: 20px;
+}
+
+.name-tag{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    margin-bottom: 40px;
+    
+}
+
+.name-tag img{
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+}
+
+.name-tag p{
+    margin: 0;
+}
+
+.create-time{
+    opacity: 0.6;
+}

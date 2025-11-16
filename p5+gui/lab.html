@@ -14,6 +14,11 @@
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+      
+    <!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=League+Script&family=Micro+5&family=Orbitron:wght@400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sedgwick+Ave+Display&family=Stack+Sans+Headline:wght@200..700&family=Stack+Sans+Text:wght@200..700&family=Tiny5&family=Twinkle+Star&display=swap" rel="stylesheet">
     <!-- <script src="jquery-3.7.1.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
@@ -21,18 +26,28 @@
     <header>
       <nav>
         <a href="../index.html" class="logo">#赢#comitted#追赶：总部</a>
+        <div class="nav-btns">
         <a href="#" class="a-subpage"
-          ><i class="ph-fill ph-magic-wand"></i> P5 + GUI</a
+          ><i class="ph ph-magic-wand"></i> P5 + GUI</a
         >
         <a href="jquery.html" class="a-subpage"
-          ><i class="ph-fill ph-airplane-taxiing"></i> JQuery Lab</a
+          ><i class="ph ph-airplane-taxiing"></i> JQuery Lab</a
         >
+        <a href="gsap.html" class="a-subpage"
+            ><i class="ph ph-hand"></i> GSAP Lab</a
+          >
+        </div>
       </nav>
       <hr>
     </header>
     <main>
       <h1>GUI for p5.js</h1>
       <p>&lpar;w/ jQuery not JS&rpar;</p>
+      <div class="name-tag">
+        <img src="../assets/wei-avatar.png" alt="wei-avatar">
+        <p>Created by <b>Yichen Wei</b>  &lpar;NOV 15 2025&rpar;</p>
+        <hr>
+      </div>
       <h2>Slider</h2>
 
       <input type="range" id="slider" value="250" min="0" max="500">
