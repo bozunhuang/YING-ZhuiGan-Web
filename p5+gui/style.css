@@ -43,3 +43,19 @@ button{
 }
 
 
+.box{
+    /* padding: 10px; */
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(213, 213, 247);
+    margin-bottom: 20px;
+}
+
+.group-from-to{
+    display: flex;
+    gap: 20px;
+    margin-top: 40px;
+}
