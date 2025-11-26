@@ -68,6 +68,22 @@ button{
     opacity: 0.2;
 }
 
+
+
 #p-replay{
     margin-bottom: 100px;
+}
+
+.section-splitText p{
+    font-size: 2rem;
+    margin-bottom: 100px;
+}
+
+.text-split{
+    
+    
+}
+
+.word{
+    border: 1px solid rgb(66, 203, 35);
 }

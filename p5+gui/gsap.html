@@ -51,14 +51,29 @@
       </div>
       <hr>
       <h2>Scroll Trigger</h2>
-      
+
       <section>
         <h3>Rotates on Load</h3>
-        <p class="placeholder-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque dignissimos atque nemo quaerat cumque. Facilis fugiat praesentium quod nisi fugit magnam ad eveniet accusantium natus magni, fuga optio similique placeat?
-        Modi quam repudiandae dolore voluptate molestiae accusantium, dolorem reprehenderit laboriosam, eligendi in commodi dolor, necessitatibus pariatur enim omnis cum eos quia corrupti minima sed quisquam numquam voluptatibus! In, corrupti fugiat?
-        Inventore, iste eaque! Recusandae rerum nemo praesentium modi aspernatur temporibus illo, laboriosam eaque totam perferendis a voluptatem natus ab tempore officiis sapiente repellat ipsum labore earum dolore! Autem, possimus debitis?
-        Est illum fuga similique quasi sint quod aliquam minima quisquam mollitia distinctio. Tempora distinctio doloremque pariatur, dolorem aperiam expedita facilis rerum, dolor sed fugiat nisi consectetur enim voluptatum. Magnam, esse.
-        Magni iure facere nemo ipsum voluptatum aliquid at, perspiciatis omnis dolorem voluptates? Non cupiditate sit quisquam voluptas, ratione minus totam reiciendis, voluptatem quod magnam accusamus dicta quaerat dolores numquam. Ducimus.</p>
+        <p class="placeholder-text">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
+          dignissimos atque nemo quaerat cumque. Facilis fugiat praesentium quod
+          nisi fugit magnam ad eveniet accusantium natus magni, fuga optio
+          similique placeat? Modi quam repudiandae dolore voluptate molestiae
+          accusantium, dolorem reprehenderit laboriosam, eligendi in commodi
+          dolor, necessitatibus pariatur enim omnis cum eos quia corrupti minima
+          sed quisquam numquam voluptatibus! In, corrupti fugiat? Inventore,
+          iste eaque! Recusandae rerum nemo praesentium modi aspernatur
+          temporibus illo, laboriosam eaque totam perferendis a voluptatem natus
+          ab tempore officiis sapiente repellat ipsum labore earum dolore!
+          Autem, possimus debitis? Est illum fuga similique quasi sint quod
+          aliquam minima quisquam mollitia distinctio. Tempora distinctio
+          doloremque pariatur, dolorem aperiam expedita facilis rerum, dolor sed
+          fugiat nisi consectetur enim voluptatum. Magnam, esse. Magni iure
+          facere nemo ipsum voluptatum aliquid at, perspiciatis omnis dolorem
+          voluptates? Non cupiditate sit quisquam voluptas, ratione minus totam
+          reiciendis, voluptatem quod magnam accusamus dicta quaerat dolores
+          numquam. Ducimus.
+        </p>
         <div class="group group-from-to">
           <div class="box box-a">a</div>
           <div class="box box-b">b</div>
@@ -67,27 +82,42 @@
       </section>
       <section>
         <h3>ScrollTrigger - Toggle Action</h3>
-        <p id="p-replay"><code>replay</code>: Box A will replay its animation every time it reenters into view, pause the animation when the user scrolls beyond it, and resumes when user scrolls back to it.</p>
+        <p id="p-replay">
+          <code>replay</code>: Box A will replay its animation every time it
+          reenters into view, pause the animation when the user scrolls beyond
+          it, and resumes when user scrolls back to it.
+        </p>
         <div class="box" id="box-toggle-action">a</div>
         <p></p>
       </section>
       <section>
         <h3>Scroll Trigger - Start Animation</h3>
-        <p>The block named "c" in this section will rotate forward when you scroll to it. </p>
+        <p>
+          The block named "c" in this section will rotate forward when you
+          scroll to it.
+        </p>
         <div class="group group-scroll-trig-start">
-        <div class="box box-a">a</div>
-        <div class="box box-b">b</div>
-        <div class="box box-d">c</div>
+          <div class="box box-a">a</div>
+          <div class="box box-b">b</div>
+          <div class="box box-d">c</div>
         </div>
       </section>
-      
+
       <hr>
-      <h2>Split Text</h2>
-      <section>
-        <p class="text-split">This HTML text will be broken up into pieces. </p>
+      <section class="section-splitText">
+        <h2>Split Text</h2>
+        <p class="text-split">This HTML text will be broken up into pieces.</p>
+        <p class="text-masked">
+          Masking effect is applied here while the text appears line-by-line.
+        </p>
+        <p class="text-float">
+          And this text will float and fade into existence.
+        </p>
+        
       </section>
     </main>
-    <script src="../gsap-js//gsap.min.js"></script>
+    <script src="../gsap-js/gsap.min.js"></script>
+    <script src="../node_modules/gsap/dist/SplitText.js"></script>
     <script src="../node_modules/gsap/dist/ScrollTrigger.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
 
