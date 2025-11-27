@@ -18,7 +18,7 @@ p{
     font-size: 1rem;
 }
 
-button{
+button, .btn{
     background-color: black;
     padding: 10px 20px;
     color: aliceblue;
@@ -86,4 +86,33 @@ button{
 
 .word{
     border: 1px solid rgb(66, 203, 35);
+}
+
+.section-smoother{
+    margin-bottom: 100px;
+}
+
+
+.gsap-main{
+    padding-bottom: 500px;
+}
+
+.group-smoother{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 50px;
+    margin: 200px 0px;
+}
+
+.box-1{
+    background-color: beige;
+    padding: 20px;
+}
+
+
+.box-2{
+    background-color: bisque;
+    padding: 20px;
+    width: 50%;
+    height: 500px;
 }

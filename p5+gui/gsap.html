@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JQuery Effects</title>
+    <title>GSAP Effects</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="style.css">
     <link
@@ -39,86 +39,105 @@
         </div>
       </nav>
     </header>
-    <main>
-      <h1>GSAP Experiments</h1>
-      <div class="name-tag">
-        <img src="../assets/wei-avatar.png" alt="wei-avatar">
-        <p>
-          Created by <b>Yichen Wei</b>
-          <span class="create-time">&lpar;NOV 16 2025&rpar;</span>
-        </p>
-        <hr>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <main class="gsap-main">
+          <h1>GSAP Experiments</h1>
+          <div class="name-tag">
+            <img src="../assets/wei-avatar.png" alt="wei-avatar">
+            <p>
+              Created by <b>Yichen Wei</b>
+              <span class="create-time">&lpar;NOV 16 2025&rpar;</span>
+            </p>
+            <hr>
+          </div>
+
+          <hr>
+
+          <section class="section-splitText" id="section-splitText">
+            <h2>Split Text</h2>
+            <p class="text-split">
+              This HTML text will be broken up into pieces.
+            </p>
+            <p class="text-masked">
+              Masking effect is applied here while the text appears
+              line-by-line.
+            </p>
+            <p class="text-float">
+              And this text will float and fade into existence.
+            </p>
+          </section>
+          <hr>
+          <section>
+            <h2>Scroll Trigger</h2>
+
+            <h3>Rotates on Load</h3>
+            <!-- <p class="placeholder-text">
+        </p> -->
+            <div class="group group-from-to">
+              <div class="box box-a">a</div>
+              <div class="box box-b">b</div>
+              <div class="box box-c">c</div>
+            </div>
+
+            <h3>ScrollTrigger - Toggle Action</h3>
+            <p id="p-replay">
+              <code>replay</code>: Box A will replay its animation every time it
+              reenters into view, pause the animation when the user scrolls
+              beyond it, and resumes when user scrolls back to it.
+            </p>
+            <div class="box" id="box-toggle-action">a</div>
+            <p></p>
+
+            <h3>Scroll Trigger - Start Animation</h3>
+            <p>
+              The block named "c" in this section will rotate forward when you
+              scroll to it.
+            </p>
+            <div class="group group-scroll-trig-start">
+              <div class="box box-a">a</div>
+              <div class="box box-b">b</div>
+              <div class="box box-d">c</div>
+            </div>
+          </section>
+          <hr>
+          <section class="section-smoother" id="section-smoother">
+            <h2>Scroll Smoother</h2>
+            <p>Scroll smoother is now applied to the entire webpage.</p>
+            <h3>Data speed</h3>
+            <div class="group group-smoother group-smoother-spd">
+              <div class="box box-a" data-speed="1.5">a</div>
+              <div class="box box-b" data-speed="1">b</div>
+              <div class="box box-c" data-speed="0.5">c</div>
+            </div>
+            <h3>Data lag</h3>
+            <div class="group group-smoother group-smoother-lag">
+              <div class="box box-a">a</div>
+              <div class="box box-b">b</div>
+              <div class="box box-c">c</div>
+            </div>
+
+          <h2>Scroll To</h2>
+          <a class="btn btn-1" href="#section-smoother">Scroll to top</a>
+          <a class="btn btn-2" href="#section-smoother">Scroll to top &lpar;+ animation&rpar;</a>
+          </section>
+
+          <section>
+            <h2>Flip</h2>
+            <button type="button" class="btn-flip">Flip first container</button>
+            <div class="box-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias exercitationem quidem perspiciatis, nostrum aliquam similique fugit mollitia assumenda? Adipisci assumenda ab consequuntur exercitationem quaerat natus quam incidunt? Magni, corrupti excepturi.
+            Accusamus, fugiat nemo aperiam perspiciatis autem debitis eaque similique, ad nesciunt officiis, qui quod nostrum. Vero est, pariatur cupiditate optio dolorum rem, eveniet fugit dignissimos facere, earum magni ratione totam?</div>
+            <div class="box-2">Empty</div>
+          </section>
+        </main>
       </div>
-      <hr>
-      <h2>Scroll Trigger</h2>
-
-      <section>
-        <h3>Rotates on Load</h3>
-        <p class="placeholder-text">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque
-          dignissimos atque nemo quaerat cumque. Facilis fugiat praesentium quod
-          nisi fugit magnam ad eveniet accusantium natus magni, fuga optio
-          similique placeat? Modi quam repudiandae dolore voluptate molestiae
-          accusantium, dolorem reprehenderit laboriosam, eligendi in commodi
-          dolor, necessitatibus pariatur enim omnis cum eos quia corrupti minima
-          sed quisquam numquam voluptatibus! In, corrupti fugiat? Inventore,
-          iste eaque! Recusandae rerum nemo praesentium modi aspernatur
-          temporibus illo, laboriosam eaque totam perferendis a voluptatem natus
-          ab tempore officiis sapiente repellat ipsum labore earum dolore!
-          Autem, possimus debitis? Est illum fuga similique quasi sint quod
-          aliquam minima quisquam mollitia distinctio. Tempora distinctio
-          doloremque pariatur, dolorem aperiam expedita facilis rerum, dolor sed
-          fugiat nisi consectetur enim voluptatum. Magnam, esse. Magni iure
-          facere nemo ipsum voluptatum aliquid at, perspiciatis omnis dolorem
-          voluptates? Non cupiditate sit quisquam voluptas, ratione minus totam
-          reiciendis, voluptatem quod magnam accusamus dicta quaerat dolores
-          numquam. Ducimus.
-        </p>
-        <div class="group group-from-to">
-          <div class="box box-a">a</div>
-          <div class="box box-b">b</div>
-          <div class="box box-c">c</div>
-        </div>
-      </section>
-      <section>
-        <h3>ScrollTrigger - Toggle Action</h3>
-        <p id="p-replay">
-          <code>replay</code>: Box A will replay its animation every time it
-          reenters into view, pause the animation when the user scrolls beyond
-          it, and resumes when user scrolls back to it.
-        </p>
-        <div class="box" id="box-toggle-action">a</div>
-        <p></p>
-      </section>
-      <section>
-        <h3>Scroll Trigger - Start Animation</h3>
-        <p>
-          The block named "c" in this section will rotate forward when you
-          scroll to it.
-        </p>
-        <div class="group group-scroll-trig-start">
-          <div class="box box-a">a</div>
-          <div class="box box-b">b</div>
-          <div class="box box-d">c</div>
-        </div>
-      </section>
-
-      <hr>
-      <section class="section-splitText">
-        <h2>Split Text</h2>
-        <p class="text-split">This HTML text will be broken up into pieces.</p>
-        <p class="text-masked">
-          Masking effect is applied here while the text appears line-by-line.
-        </p>
-        <p class="text-float">
-          And this text will float and fade into existence.
-        </p>
-        
-      </section>
-    </main>
+    </div>
     <script src="../gsap-js/gsap.min.js"></script>
-    <script src="../node_modules/gsap/dist/SplitText.js"></script>
+    <script src="../node_modules/gsap/dist/SplitText.min.js"></script>
+    <script src="../node_modules/gsap/dist/Flip.min.js"></script>
+
     <script src="../node_modules/gsap/dist/ScrollTrigger.min.js"></script>
+    <script src="../node_modules/gsap/dist/ScrollSmoother.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script> -->
 
     <script src="gsap-script.js"></script>

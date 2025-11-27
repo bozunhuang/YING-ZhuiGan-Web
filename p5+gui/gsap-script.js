@@ -7,7 +7,7 @@ gsap.to(".group-from-to .box", {
   duration: 5,
 });
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText, Flip);
 
 gsap.to(".box-d", {
   scrollTrigger: ".box-d",
@@ -28,7 +28,6 @@ gsap.to("#box-toggle-action", {
   duration: 2,
 });
 
-gsap.registerPlugin(SplitText);
 
 let split = SplitText.create(".text-split", {
   type: "chars, words, lines",
@@ -83,4 +82,64 @@ let masking = SplitText.create(".text-masked", {
   onComplete: (self) => {
     split.revert()
   },
+});
+
+
+//smoother
+
+let smoother = ScrollSmoother.create({
+    wrapper: "#smooth-wrapper",
+    content: "#smooth-content",
+    smooth: 2, 
+    effects: true,
+})
+
+gsap.to(".group-smoother-spd .box-c", {
+    rotate: 360,
+    scrollTrigger: {
+        trigger: ".group-smoother-spd .box-c", 
+        start: 'center center',
+        markers: true,
+        scrub: true,
+    }
+})
+
+gsap.to(".group-smoother-lag .box-c", {
+    pin: '.group-smoother-lag .box-c',
+    start: 'top center',
+    end: '+=200px',
+    markers: true
+})
+
+let button1 = document.querySelector(".btn-1");
+
+button1.addEventListener("click", (e) => {
+    smoother.scrollTo("#section-splitText", true, "top center")
+});
+
+let button2 = document.querySelector(".btn-2");
+
+button2.addEventListener("click", (e) => {
+    gsap.to(smoother, {
+        scrollTop: smoother.offset("#section-splitText", "center center"),
+        duration: 2, 
+        ease: 'back.out'
+    })
+});
+
+smoother.effects(".group-smoother-lag .box", {
+    speed: 0.5, 
+    lag: (i) => i * 1
+});
+
+let box1 = document.querySelector(".box-1");
+let buttonFlip = document.querySelector(".btn-flip");
+
+buttonFlip.addEventListener("click", (e) => {
+    const state = Flip.getState(box1);
+    Flip.fit(".box-1", ".box-2", {
+        scale: true,
+        duration: 2, 
+        ease: "power1.inOut",
+    });
 });
